@@ -23,7 +23,7 @@ export const serviceRequestApi = createApi({
     updateServiceRequestStatus: builder.mutation({
       query: (data) => ({
         url: "/api/v1/service-request/" + data.id,
-        method: "PATCH",
+        method: "PUT",
         body: data.body,
         headers: {
           "Content-Type": "application/json",

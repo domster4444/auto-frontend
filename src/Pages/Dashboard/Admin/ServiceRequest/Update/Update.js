@@ -44,6 +44,7 @@ const Update = () => {
   }
 
   if (fetchedVehicles) {
+    console.log("featched vehicle , ", fetchedVehicles);
     vehicleOptions = fetchedVehicles.data?.map((vehicle) => {
       return { value: vehicle._id, label: vehicle.number };
     });
@@ -178,11 +179,10 @@ const Update = () => {
     e.preventDefault();
 
     const dataToSubmit = {
-      vehicle_id: state.selectedVehicle.value,
       user: state.selectedUser.value,
       employee: state.selectedEmployee.value,
       issue: issues.map((issue) => issue.issueDescription),
-      number: state.selectedVehicle.value,
+      vehicle_id: state.selectedVehicle.value,
       is_pickup: state.is_pickup,
       is_dropoff: state.is_drop,
       pickup_detail: {
@@ -197,7 +197,7 @@ const Update = () => {
       },
     };
 
-    console.log(selectedVehicle);
+    console.log("data to submit", dataToSubmit);
 
     const errorMessages = {
       vehicle: "Please select vehicle.",
@@ -262,8 +262,7 @@ const Update = () => {
 
         dispatch({ type: "SET_SELECTED_EMPLOYEE", payload: { value: selectedEmployee._id, label: selectedEmployee.name } });
       }
-
-      dispatch({ type: "SET_SELECTED_VEHICLE", payload: { value: serviceRequestData.vehicle._id, label: serviceRequestData.vehicle.number } });
+      // dispatch({ type: "SET_SELECTED_VEHICLE", payload: { value: serviceRequestData.vehicle._id, label: serviceRequestData.vehicle.number } });
       dispatch({ type: "SET_SELECTED_USER", payload: { value: serviceRequestData.user._id, label: serviceRequestData.user.phone_number } });
       setIssues(serviceRequestData.issue.map((issue) => ({ issueDescription: issue })));
       dispatch({ type: "SET_IS_PICKEDUP", payload: serviceRequestData.is_pickup });
@@ -275,7 +274,7 @@ const Update = () => {
       dispatch({ type: "SET_DROPUP_WARD", payload: serviceRequestData.dropoff_detail.ward });
       dispatch({ type: "SET_DROPUP_LOCALITY", payload: serviceRequestData.dropoff_detail.locality });
     }
-  }, [fetchedServiceRequest]);
+  }, [fetchedServiceRequest, fetchedEmployee]);
 
   const columns = [
     {
