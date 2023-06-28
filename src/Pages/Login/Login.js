@@ -90,9 +90,7 @@ const Login = () => {
   return (
     <LoginBody>
       <LoginHeadingAnimation>
-        <div className='d-flex justify-content-center pt-5'>
-          <Logo size='50px' alt='deerwalk logo' className='mt-5 mb-4' />
-        </div>
+        <div className='d-flex justify-content-center pt-5'>{/* <Logo size='50px' alt='deerwalk logo' className='mt-5 mb-4' /> */}</div>
       </LoginHeadingAnimation>
       <Heading as='h1' className='text-white text-center mt-4'>
         Maintenance Simplified

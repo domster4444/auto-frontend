@@ -74,18 +74,10 @@ const ForgotPassword = () => {
     <ForgotPasswordBody>
       {/* ---------------------  */}
       <LoginHeadingAnimation>
-        <div className='d-flex justify-content-center pt-5'>
-          <Logo size='50px' alt='deerwalk logo' className='mt-5 mb-4' />
-          {/* <div className='mt-5 mb-4'>
-          <LogoSkeleton />
-        </div> */}
-        </div>
+        <div className='d-flex justify-content-center pt-5'>{/* <Logo size='50px' alt='deerwalk logo' className='mt-5 mb-4' /> */}</div>
       </LoginHeadingAnimation>
       <Heading as='h1' className='text-white text-center mt-4'>
-        Deerwalk Autoservice
-        {/* <div className='ms-2 pt-2'>
-          <Skeleton style={{ width: "15rem", height: "1.5rem" }} duration={0.7} />
-        </div> */}
+        {/* Deerwalk Autoservice */}
       </Heading>
 
       <div className='text-center display-3 mt-3 mb-2 text-white'>

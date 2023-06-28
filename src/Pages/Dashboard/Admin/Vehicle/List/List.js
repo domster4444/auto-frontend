@@ -182,7 +182,7 @@ const List = () => {
             <i className='bx bxs-edit me-2'></i>
             Edit
           </a>
-          <button
+          {/* <button
             className='btn-sm btn-danger mx-2 my-1 btn text-white'
             onClick={async () => {
               await deleteVehicle(row._id).then((res) => {
@@ -195,7 +195,7 @@ const List = () => {
           >
             <i className='bx bxs-trash me-2'></i>
             Delete
-          </button>
+          </button> */}
         </div>
       ),
     },
