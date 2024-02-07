@@ -47,8 +47,9 @@ const Admin = () => {
   }, [loggedInUserDetails]);
   useEffect(() => {
     if (roles.includes("user") && !roles.includes("mechanic") && !roles.includes("admin") && !roles.includes("receptionist")) {
+      window.location.href = "/";
       localStorage.removeItem("accessToken");
-      window.location.href = "/user-not-allowed";
+      // window.location.href = "/user-not-allowed";
     }
 
     if (roles.includes("mechanic") && !roles.includes("user") && !roles.includes("admin") && !roles.includes("receptionist")) {

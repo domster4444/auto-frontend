@@ -35,6 +35,7 @@ const AsideDropdown = styled.ul`
   margin-left: 0.5rem;
   border-left: 3px solid #a5d6f2;
   li {
+    font-size: 1.4rem;
     transition: all ease-in 200ms;
     border-left: 3px solid transparent;
     margin-top: 0.4rem;
@@ -60,7 +61,7 @@ const NavDropdown = ({ title = "default menu title", linkArray = ["one", "two"],
       <ul className='px-0'>
         <div onClick={toggleAsideDropdownOpenState}>
           <NavDropdownTitle className='d-flex align-items-center justify-content-between px-2'>
-            <div>{title}</div>
+            <div style={{ fontSize: "1.5rem" }}>{title}</div>
 
             {(() => {
               if (AsideDropdownOpenState) {

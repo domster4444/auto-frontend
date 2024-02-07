@@ -72,8 +72,9 @@ homepage ("/"). This is a security measure to prevent unauthorized access to pro
   const { name, roles, avatar } = loggedInUserDetails.data;
 
   if (roles.includes("user")) {
+    window.location.href = "/";
     localStorage.removeItem("accessToken");
-    window.location.href = "/user-not-allowed";
+    // window.location.href = "/user-not-allowed";
   }
 
   return (

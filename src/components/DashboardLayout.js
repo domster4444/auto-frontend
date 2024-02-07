@@ -24,19 +24,19 @@ const Layout = ({ menus, pageTitle, path, children }) => {
       const { name, phone_number, roles } = loggedUserDetails;
 
       // if role includes mechanic then show chat
-      if (roles.includes("mechanic")) {
-        window.$crisp = [];
-        window.CRISP_WEBSITE_ID = "a963342c-2723-4837-adae-7d037003bdec";
-        (function () {
-          var d = document;
-          var s = d.createElement("script");
-          s.src = "https://client.crisp.chat/l.js";
-          s.async = 1;
-          d.getElementById("chat-container").appendChild(s);
-          // set name
-          window.$crisp.push(["set", "user:nickname", [name]]);
-        })();
-      }
+      // if (roles.includes("mechanic")) {
+      //   window.$crisp = [];
+      //   window.CRISP_WEBSITE_ID = "a963342c-2723-4837-adae-7d037003bdec";
+      //   (function () {
+      //     var d = document;
+      //     var s = d.createElement("script");
+      //     s.src = "https://client.crisp.chat/l.js";
+      //     s.async = 1;
+      //     d.getElementById("chat-container").appendChild(s);
+      //     // set name
+      //     window.$crisp.push(["set", "user:nickname", [name]]);
+      //   })();
+      // }
     }
   }, [loggedInUserDetails]);
   return (
